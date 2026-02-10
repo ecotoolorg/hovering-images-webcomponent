@@ -25,7 +25,7 @@ class HoveringImages extends HTMLElement {
           transform-style: preserve-3d;
         }
 
-        .floating-img {
+        .hovering-img {
           position: absolute;
           inset: 0;
           width: 100%;
@@ -168,10 +168,10 @@ class HoveringImages extends HTMLElement {
       return;
     }
 
-    // Create floating images from configuration
+    // Create hovering images from configuration
     imagesData.forEach((config, index) => {
       const img = document.createElement("img");
-      img.className = "floating-img";
+      img.className = "hovering-img";
 
       if (config.src) {
         img.src = config.src;
@@ -213,8 +213,8 @@ class HoveringImages extends HTMLElement {
 }
 
 // Register the component **only in the browser**
-if (typeof window !== "undefined" && !customElements.get("floating-images")) {
-  customElements.define("floating-images", HoveringImages);
+if (typeof window !== "undefined" && !customElements.get("hovering-images")) {
+  customElements.define("hovering-images", HoveringImages);
 }
 
 // Export the class for optional use (safe in SSR)

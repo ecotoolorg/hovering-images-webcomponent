@@ -1,11 +1,11 @@
-# Floating Images Web Component
+# hovering Images Web Component
 
-A flexible Web Component that overlays multiple images with a floating depth effect. Each image can be individually configured with its own animation properties. No limit on the number of images!
+A flexible Web Component that overlays multiple images with a hovering depth effect. Each image can be individually configured with its own animation properties. No limit on the number of images!
 
 ## Install
 
 ```bash
-npm install github:ecotoolorg/floating-images-webcomponent
+npm install github:ecotoolorg/hovering-images-webcomponent
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install github:ecotoolorg/floating-images-webcomponent
 Pass configuration as a JSON array via the `images` attribute:
 
 ```html
-<floating-images
+<hovering-images
   images='[
   {
     "src": "image1.png",
@@ -32,7 +32,7 @@ Pass configuration as a JSON array via the `images` attribute:
     "delay": -1
   }
 ]'
-></floating-images>
+></hovering-images>
 ```
 
 ## Configuration Options
@@ -59,7 +59,7 @@ Each image supports the following configuration options:
 The component uses Shadow DOM. You can style the host element:
 
 ```css
-floating-images {
+hovering-images {
   width: 500px;
   height: 500px;
   display: block;
