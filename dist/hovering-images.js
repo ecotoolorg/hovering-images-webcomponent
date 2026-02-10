@@ -1,5 +1,5 @@
 // Define the class (safe to parse on server)
-class FloatingImages extends HTMLElement {
+class HoveringImages extends HTMLElement {
   static get observedAttributes() {
     return ["images"];
   }
@@ -69,7 +69,17 @@ class FloatingImages extends HTMLElement {
 
   // Property setter for programmatic configuration
   set images(config) {
-    this._imagesConfig = config;
+    // Handle both array and JSON string input
+    if (typeof config === "string") {
+      try {
+        this._imagesConfig = JSON.parse(config);
+      } catch (e) {
+        console.error("Invalid JSON string passed to images property:", e);
+        this._imagesConfig = null;
+      }
+    } else {
+      this._imagesConfig = config;
+    }
     this.render();
   }
 
@@ -204,8 +214,8 @@ class FloatingImages extends HTMLElement {
 
 // Register the component **only in the browser**
 if (typeof window !== "undefined" && !customElements.get("floating-images")) {
-  customElements.define("floating-images", FloatingImages);
+  customElements.define("floating-images", HoveringImages);
 }
 
 // Export the class for optional use (safe in SSR)
-export default FloatingImages;
+export default HoveringImages;

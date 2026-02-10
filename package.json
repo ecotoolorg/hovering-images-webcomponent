@@ -1,14 +1,14 @@
 {
-  "name": "floating-images-webcomponent",
+  "name": "hovering-images-webcomponent",
   "version": "0.1.0",
-  "description": "A Web Component that overlays 4 images with a floating effect",
+  "description": "A Web Component that overlays 4 images with a hovering effect",
   "type": "module",
-  "main": "dist/floating-images.js",
+  "main": "dist/hovering-images.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "cp src/floating-images.js dist/floating-images.js",
+    "build": "cp src/hovering-images.js dist/hovering-images.js",
     "dev": "vite"
   },
   "license": "MIT",

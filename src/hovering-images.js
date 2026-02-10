@@ -1,5 +1,5 @@
 // Define the class (safe to parse on server)
-class FloatingImages extends HTMLElement {
+class HoveringImages extends HTMLElement {
   static get observedAttributes() {
     return ["images"];
   }
@@ -214,8 +214,8 @@ class FloatingImages extends HTMLElement {
 
 // Register the component **only in the browser**
 if (typeof window !== "undefined" && !customElements.get("floating-images")) {
-  customElements.define("floating-images", FloatingImages);
+  customElements.define("floating-images", HoveringImages);
 }
 
 // Export the class for optional use (safe in SSR)
-export default FloatingImages;
+export default HoveringImages;
