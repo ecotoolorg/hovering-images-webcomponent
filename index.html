@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Floating Images Test</title>
+  </head>
+  <body>
+    <div style="width: 500px; height: 500px">
+      <floating-images
+        images='[
+        {
+          "src": "https://vzffdmzjzrspttujbkom.supabase.co/storage/v1/object/public/media/images_materials/Bildframe1.png",
+          "direction": "xy",
+          "strength": 16,
+          "z": 0,
+          "duration": 6,
+          "delay": 0
+        },
+        {
+          "src": "https://vzffdmzjzrspttujbkom.supabase.co/storage/v1/object/public/media/images_materials/Bildframe2.png",
+          "direction": "xy",
+          "strength": 16,
+          "z": 15,
+          "duration": 7.5,
+          "delay": -1
+        },
+        {
+          "src": "https://vzffdmzjzrspttujbkom.supabase.co/storage/v1/object/public/media/images_materials/Bildframe3.png",
+          "direction": "xy",
+          "strength": 16,
+          "z": 30,
+          "duration": 8.5,
+          "delay": -2
+        },
+        {
+          "src": "https://vzffdmzjzrspttujbkom.supabase.co/storage/v1/object/public/media/images_materials/Bildframe4.png",
+          "direction": "xy",
+          "strength": 16,
+          "z": 45,
+          "duration": 10,
+          "delay": -3
+        }
+      ]'
+      ></floating-images>
+    </div>
+
+    <script type="module" src="/src/floating-images.js"></script>
+  </body>
+</html>
