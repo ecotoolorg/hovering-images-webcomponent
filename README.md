@@ -1,6 +1,6 @@
 # Hovering Images Web Component
 
-A flexible Web Component that overlays multiple images with a hovering depth effect. Each image can be individually configured with its own animation properties. No limit on the number of images!
+A flexible Web Component that overlays and blends multiple images over each other with a hovering depth effect. Each image can be individually configured with its own animation properties. No limit on the number of images!
 
 ## Install
 
